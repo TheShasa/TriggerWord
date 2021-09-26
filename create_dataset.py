@@ -1,5 +1,6 @@
 from re import I
 import numpy as np
+from numpy.core.getlimits import iinfo
 from utils.td_utils import load_raw_audio
 import utils.config as config
 import utils.general as general
@@ -25,8 +26,8 @@ back_index = np.random.randint(
 print(back_index.shape)
 print(back_index[:10])
 
-for index in tqdm(range(config.TRAIN_SIZE)):
+for i in tqdm(range(config.TRAIN_SIZE)):
     x, y = general.create_training_example(
-        backgrounds[index], activates, negatives)
-    np.save('Data/X_train/'+str(index)+'.npy', x)
-    np.save('Data/Y_train/'+str(index)+'.npy', y)
+        backgrounds[back_index[i]], activates, negatives)
+    np.save('Data/X_train/'+str(i)+'.npy', x)
+    np.save('Data/Y_train/'+str(i)+'.npy', y)
