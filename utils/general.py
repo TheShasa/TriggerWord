@@ -133,7 +133,7 @@ def insert_ones(y, segment_end_ms):
 # GRADED FUNCTION: create_training_example
 
 
-def create_training_example(background, activates, negatives, save=True):
+def create_training_example(background, activates, negatives):
     """
     Creates a training example with a given
      background, activates, and negatives.
@@ -199,9 +199,8 @@ def create_training_example(background, activates, negatives, save=True):
     background = match_target_amplitude(background, -20.0)
 
     # Export new training example
-    if save:
-        _ = background.export("train" + ".wav", format="wav")
-        print("File (train.wav) was saved in your directory.")
+    _ = background.export("train" + ".wav", format="wav")
+    print("File (train.wav) was saved in your directory.")
 
     # Get and plot spectrogram of the new recording (background
     #  with superposition of positive and negatives)

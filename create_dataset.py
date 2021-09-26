@@ -27,7 +27,6 @@ print(back_index[:10])
 
 for index in tqdm(range(config.TRAIN_SIZE)):
     x, y = general.create_training_example(
-        backgrounds[index], activates, negatives, False)
+        backgrounds[index], activates, negatives)
     np.save('Data/X_train/'+str(index)+'.npy', x)
     np.save('Data/Y_train/'+str(index)+'.npy', y)
-    break
