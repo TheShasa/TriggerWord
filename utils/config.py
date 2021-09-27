@@ -14,3 +14,12 @@ BACKGROUND_FOLDER = 'raw_data/backgrounds_office/'
 NEGATIVE_FOLDER = 'raw_data/norm_sliced/'
 
 TRAIN_SIZE = 4000
+SPLIT_VAL_PERCENT = 10
+BATCH_SIZE = 16
+NUM_EPOCHS = 400
+
+## Testing 
+# TRAIN_SIZE = 10
+# SPLIT_VAL_PERCENT = 20
+# BATCH_SIZE = 2
+# NUM_EPOCHS = 2

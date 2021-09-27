@@ -87,6 +87,8 @@ XY_train/
 *.npy
 .vscode/
 
+runs/
+tb_logs/
 audio_examples/
 cur_audios/
 Data/

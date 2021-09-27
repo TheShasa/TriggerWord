@@ -200,7 +200,6 @@ def create_training_example(background, activates, negatives):
 
     # Export new training example
     _ = background.export("train" + ".wav", format="wav")
-    print("File (train.wav) was saved in your directory.")
 
     # Get and plot spectrogram of the new recording (background
     #  with superposition of positive and negatives)
