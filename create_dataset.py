@@ -24,6 +24,9 @@ back_index = np.random.randint(
 print(back_index.shape)
 print(back_index[:10])
 
+for path in ['Data/X_train/', 'Data/Y_train/']:
+    if not os.path.exists(path):
+        os.makedirs(path)
 for i in tqdm(range(config.TRAIN_SIZE)):
     x, y = general.create_training_example(
         backgrounds[back_index[i]], activates, negatives)
