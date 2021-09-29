@@ -12,7 +12,7 @@ def get_save_callback(folder='runs'):
     save_callback = tf.keras.callbacks.ModelCheckpoint(
         filepath=weights_path,
         save_weights_only=True,
-        monitor='val_acc',
+        monitor='val_f1_score',
         mode='max',
         save_best_only=True)
     return save_callback
