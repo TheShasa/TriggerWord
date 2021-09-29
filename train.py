@@ -7,7 +7,6 @@ from utils.losses import CustomLosses
 from tensorflow.keras.optimizers import Adam
 import tensorflow as tf
 import numpy as np
-import os
 
 tf.compat.v1.disable_v2_behavior()  # model trained in tf1
 
@@ -24,9 +23,6 @@ model.compile(loss=loss_func, optimizer=opt, metrics=["accuracy",
 
 path_to_x = 'Data/X_train/'
 path_to_y = 'Data/Y_train/'
-for path in [path_to_x, path_to_y]:
-    if not os.path.exists(path):
-        os.makedirs(path)
 
 np.random.seed(42)
 indexes = np.arange(config.TRAIN_SIZE)

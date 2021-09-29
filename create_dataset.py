@@ -3,7 +3,7 @@ from utils.td_utils import load_raw_audio
 import utils.config as config
 import utils.general as general
 from tqdm import tqdm
-
+import os
 # Load audio segments using pydub
 activates, negatives, backgrounds = load_raw_audio(
     config.BACKGROUND_FOLDER, config.ACTIVE_FOLDER, config.NEGATIVE_FOLDER)
